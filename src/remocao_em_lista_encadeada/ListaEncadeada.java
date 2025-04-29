@@ -109,16 +109,12 @@ public class ListaEncadeada {
                     System.out.println("Número " + numeroParaAdicionar + " adicionado com sucesso.");
                     break;
 
-                case 3:
+                default:
                     System.out.println("Obrigada por usar o programa!");
                     continuaPrograma = false;
                     break;
-
-                default:
-                    System.out.println("Opção inválida! Tente novamente.");
-                    break;
-            }
-        }
+            	}	
+        	}
 
         scanner.close();
     }
