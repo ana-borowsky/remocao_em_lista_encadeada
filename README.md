@@ -33,7 +33,7 @@ Sua opção: _
 1. Certifique-se de ter o Java instalado.
 2. Execute a classe main
 
-## 🔧 Implementação
+## Implementação
 
 A classe `ListaEncadeada` contém:
 
