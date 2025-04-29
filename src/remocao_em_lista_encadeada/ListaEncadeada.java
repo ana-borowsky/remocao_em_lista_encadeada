@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class ListaEncadeada {
     class No {
-        int dado; 
+        int dado;
         No proximo;
 
         No(int dado) {
@@ -11,38 +11,38 @@ public class ListaEncadeada {
             this.proximo = null;
         }
     }
-    
+
     No inicio = null; // Referência para o primeiro nó da lista encadeada
-    
+
     // Método que verifica se a lista está vazia
     public boolean vazia() {
         return inicio == null;
     }
-    
+
     // Método para inserir um elemento na lista
     public void insere(int dado) {
-        No novoNo = new No(dado); 
+        No novoNo = new No(dado);
         if (this.vazia()) {
-            inicio = novoNo;  
-        } else { 
+            inicio = novoNo;
+        } else {
             No atual = inicio;
             while (atual.proximo != null) {
-                atual = atual.proximo; 
+                atual = atual.proximo;
             }
-            atual.proximo = novoNo; 
+            atual.proximo = novoNo;
         }
     }
-    
+
     // Método que imprime a lista
     public void imprime() {
     	if (this.vazia()) {
     		System.out.println("Lista vazia!");
     	} else {
-        No atual = inicio; 
+        No atual = inicio;
         System.out.print("\nLista: ");
         while (atual != null) {
             System.out.print(atual.dado + " ");
-            atual = atual.proximo; 
+            atual = atual.proximo;
         }
         System.out.println();
     	}
@@ -69,7 +69,7 @@ public class ListaEncadeada {
             System.out.println("Lista vazia!");
         }
     }
-    
+
 //Método main para testar o programa
     public static void main(String[] args) {
         final Scanner scanner = new Scanner(System.in);
@@ -82,7 +82,6 @@ public class ListaEncadeada {
         lista.insere(35);
 
         while (continuaPrograma) {
-            System.out.println("\nLista atual:");
             if (!lista.vazia()) lista.imprime();
             else System.out.println("A lista está vazia.");
 
@@ -98,7 +97,7 @@ public class ListaEncadeada {
                 case 1:
                     System.out.print("Digite o número a ser removido: ");
                     int numeroParaRemover = Integer.parseInt(scanner.nextLine());
-                    lista.remove(numeroParaRemover); // 
+                    lista.remove(numeroParaRemover); //
                     System.out.println("Número " + numeroParaRemover + " removido (se presente).");
                     break;
 
@@ -113,7 +112,7 @@ public class ListaEncadeada {
                     System.out.println("Obrigada por usar o programa!");
                     continuaPrograma = false;
                     break;
-            	}	
+            	}
         	}
 
         scanner.close();
